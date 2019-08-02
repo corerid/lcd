@@ -17,20 +17,23 @@ def lcd(number):
             out.append([[' ','_',' '],
                         [' ','_','|'],
                         [' ','_','|']])
+        elif number[i] == '4':
+            out.append([[' ',' ',' '],
+                        ['|','_','|'],
+                        [' ',' ','|']])
+        elif number[i] == '5':
+            out.append([[' ','_',' '],
+                        ['|','_',' '],
+                        [' ','_','|']])
 
-    k = 0
     for j in range(3):
         for i in range(num_len):
             for k in range(3):
-                # print (i,j,k)
                 res += out[i][j][k]
         res += '\n'
-
-    # print res
-
     return res
     
-res = lcd(123)
+res = lcd(12345)
 print (res)
 
 
